@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container-fluid">   {# just <div> is OK as well, the difference is just in some minor indentation #}
+        <br>
+        <p>The current numbers of performers and festivals in the database:</p>
+        <ul>
+            <li><strong>Performers: </strong>{{ n_p }}</li>
+            <li><strong>Festivals: </strong>{{ n_f }}</li>
+        </ul>
+    </div>
+{% endblock %}

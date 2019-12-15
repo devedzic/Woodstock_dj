@@ -25,7 +25,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 
-# The following lines have been put here first, before the RedirectView has been applied below,
+# The following lines have been put here first, before anything else has been added below,
 # and then they were moved to music/urls.py and music/urls.py was included here (otherwise an exception is raised)
 # urlpatterns += [
 #     path('', views.index, name='index')

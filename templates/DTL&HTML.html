@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DTL & HTML</title>
+</head>
+<body>
+<!--
+DTL
+---
+
+    Extending base template
+    -----------------------
+    {% extends '<base>.html' %}
+
+    Handling static files
+    ---------------------
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <img src="{% static 'images/<<image file name>.<extension>>' %}" alt="">
+        example: <img src="{% static 'images/woodstock-iconic.jpg' %}" alt="">
+
+    Blocks
+    ------
+    Putting everything inside a block into a <div> enables more control over whitespace etc. For example:
+    {% block <block_name> %}
+        <div class="container-fluid">   {# just <div> is OK as well, the difference is just in some minor indentation #}
+            <br>
+            <p>...</p>
+            <ul>
+                <li><strong>XXX: </strong>{{ <var_name (from the corresponding view context)> }}</li>
+                ...
+            </ul>
+        </div>
+    {% endblock %}
+
+    Variables
+    ---------
+    {{ var_name }}
+        in list view: <the name of the corresponding class, all lowercase>_list, e.g. {{ performer_list }}
+                      {{ object_list }} is a good, universal alternative; works as an alias for each model class
+        in detail view: <the name of the corresponding class, all lowercase>, e.g. {{ performer }}
+    {{ var_name.field_name }} for accessing a specific object field in a template
+
+    URLs / Links
+    {% url '<name of the corresponding view>' <object>.pk %}
+        example: {% url 'performer-detail' performer.pk %}
+        typical use case: <a href="{% url 'performer-detail' performer.pk %}">{{ performer.name }}</a>
+
+HTML
+----
+-->
+</body>
+</html>

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container-fluid">   {# just <div> is OK as well, the difference is just in some minor indentation #}
+        <br>
+        <p>{{ festival }}</p>
+
+        <!-- Added in the second step -->
+        {% if festival.performer_set %}
+            <ul>
+                {% for performer in festival.performer_set.all %}
+                    <li>
+                        <a href="{% url 'performer-detail' performer.pk %}">{{ performer.name }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+{% endblock %}

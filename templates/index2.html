@@ -1,0 +1,14 @@
+{% extends 'base2.html' %}
+
+{% block content %}
+    <div class="container-fluid">
+        <br>
+        <p>The current numbers of performers and festivals in the database:</p>
+        <ul>
+{#            <li><strong>Performers: </strong>{{ n_performers }}</li>#}
+{#            <li><strong>Festivals: </strong>{{ n_festivals }}</li>#}
+            <li><strong>Performers: </strong>{{ n_p }}</li>
+            <li><strong>Festivals: </strong>{{ n_f }}</li>
+        </ul>
+    </div>
+{% endblock %}
