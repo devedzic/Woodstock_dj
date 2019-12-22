@@ -15,5 +15,11 @@
                 {% endfor %}
             </ul>
         {% endif %}
+
+        <!-- Added in the third step, in order to enable CRUD -->
+        <p>
+            <a href="{% url 'festival-update' festival.pk %}">Update festival</a> <br>
+            <a href="{% url 'festival-delete' festival.pk %}">Delete festival</a>
+        </p>
     </div>
 {% endblock %}

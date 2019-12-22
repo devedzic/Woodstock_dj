@@ -15,5 +15,6 @@
         {% else %}
             <p>No performers registered in the database yet.</p>
         {% endif %}
+        <p><a href="{% url 'performer-create' %}">Add performer</a></p>     <!-- Added subsequently, for CRUD -->
     </div>
 {% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container-fluid">   {# just <div> is OK as well, the difference is just in some minor indentation #}
+        <br>
+        <p>Delete festival: {{ festival }} <br>
+            Are you sure?
+        </p>
+
+        <form action="" method="POST">
+            {% csrf_token %}
+            <input type="submit" value="Yes, delete">
+            &nbsp; &nbsp;
+            <a href="{% url 'festival-detail' festival.pk %}">No, keep it</a>
+        </form>
+        <br>
+    </div>
+{%  endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container-fluid">   {# just <div> is OK as well, the difference is just in some minor indentation #}
+        <br>
+        <p>Delete performer: {{ performer }} <br>
+            Are you sure?
+        </p>
+
+        <form action="" method="POST">
+            {% csrf_token %}
+            <input type="submit" value="Yes, delete">
+            &nbsp; &nbsp;
+            <a href="{% url 'performer-detail' performer.pk %}">No, keep it</a>
+        </form>
+        <br>
+    </div>
+{%  endblock %}

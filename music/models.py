@@ -10,7 +10,7 @@ from woodstock_dj import settings
 """
 Create some model(s) in the <app>/models.py file
     typical fields:
-        models.CharField(max_length=<n>)
+        models.CharField(max_length=<n>, default='<...>')
         models.BooleanField(verbose_name=<verbose name>, 
 		    		        choices=<choices_list>, 
 		    		        default=<choice from choices_list>,
@@ -25,7 +25,7 @@ Create some model(s) in the <app>/models.py file
         ...
 	typical methods:
 	    __str__()
-        get_absolute_url()		# return reverse('<Model-detail>', args=[str(self.id)])
+        get_absolute_url()		# return reverse('<model>-detail', args=[str(self.id)])
         ...
 Register each model in <app>.admin.py with a separate line like:
     admin.site.register(<Model>)

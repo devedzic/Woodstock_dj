@@ -4,5 +4,17 @@
     <div class="container-fluid">   {# just <div> is OK as well, the difference is just in some minor indentation #}
         <br>
         <p>{{ performer }}</p>
+        <p>
+            <a href="{% url 'performer-update' performer.pk %}">Update performer</a> <br>
+            <a href="{% url 'performer-delete' performer.pk %}">Delete performer</a>
+        </p>
+
+{#        <!-- Just testing get_context_data() -->#}
+{#        <p>All festivals in the database:</p>#}
+{#        <ul>#}
+{#            {% for festival in all_festivals %}#}
+{#                <li><a href="{% url 'festival-detail' festival.pk %}">{{ festival }}</a></li>#}
+{#            {% endfor %}#}
+{#        </ul>#}
     </div>
 {% endblock %}

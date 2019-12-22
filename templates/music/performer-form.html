@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{%  block content %}
+    <div class="container-fluid">   {# just <div> is OK as well, the difference is just in some minor indentation #}
+        <br>
+        <p>Create/Update performer:</p>
+        <form action="" method="post">
+            {% csrf_token %}
+            <table>
+                {{ form.as_table }}
+            </table>
+            <input type="submit" value="Submit">
+        </form>
+        <br>
+    </div>
+{% endblock %}

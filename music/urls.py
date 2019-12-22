@@ -33,3 +33,17 @@ urlpatterns += [
 urlpatterns += [
     path('festivals/<int:pk>/', views.FestivalDetailView.as_view(), name='festival-detail')
 ]
+
+urlpatterns += [
+    path('performers/create/', views.PerformerCreateView.as_view(), name='performer-create'), 
+    path('performers/<int:pk>/update/', views.PerformerUpdateView.as_view(), name='performer-update'), 
+    path('performers/<int:pk>/delete/', views.PerformerDeleteView.as_view(), name='performer-delete'),
+]
+
+urlpatterns += [
+    path('festivals/create/', views.FestivalCreateView.as_view(), name='festival-create'),
+    path('festivals/<int:pk>/update/', views.FestivalUpdateView.as_view(), name='festival-update'),
+    path('festivals/<int:pk>/delete/', views.FestivalDeleteView.as_view(), name='festival-delete'),
+]
+
+
